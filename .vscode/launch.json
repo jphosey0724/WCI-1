@@ -335,6 +335,34 @@
                     "ignoreFailures": true
                 }
             ]
-        },                                                           
+        },
+        {
+            // debug configuration for the 'syntax3' program
+            "name": "(gdb) syntax3",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${command:cmake.launchTargetDirectory}/syntax3",
+            "args": [
+                //"${workspaceFolder}/chap7/rtnerr.pas",
+                "${workspaceFolder}/chap7/scopeerr.pas",
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ]
+        },                                                                     
     ]
 }
