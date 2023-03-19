@@ -1,0 +1,340 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            // generic debug configuration that will launch the selected CMake target.
+            "name": "(gdb) Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${command:cmake.launchTargetPath}",
+            "args": [
+                "tests/newton.pas"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [
+                {
+                    // add the directory where our target was built to the PATHs
+                    // it gets resolved by CMake Tools:
+                    "name": "PATH",
+                    "value": "$PATH:${command:cmake.launchTargetDirectory}"
+                }
+            ],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            // debug configuration for the 'list' program
+            "name": "(gdb) list",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${command:cmake.launchTargetDirectory}/list",
+            "args": [
+                "${workspaceFolder}/chap1/newton.pas",
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            // debug configuration for the 'token1' program
+            "name": "(gdb) token1",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${command:cmake.launchTargetDirectory}/token1",
+            "args": [
+                "${workspaceFolder}/chap2/token1.in",
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ]
+        },        
+        {
+            // debug configuration for the 'token2' program
+            "name": "(gdb) token2",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${command:cmake.launchTargetDirectory}/token2",
+            "args": [
+                "${workspaceFolder}/chap2/hello.pas",
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ]
+        },        
+        {
+            // debug configuration for the 'compact' program
+            "name": "(gdb) compact",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${command:cmake.launchTargetDirectory}/compact",
+            "args": [
+                "${workspaceFolder}/chap2/hello.pas",
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            // debug configuration for the 'crunch' program
+            "name": "(gdb) crunch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${command:cmake.launchTargetDirectory}/crunch",
+            "args": [
+                "${workspaceFolder}/chap2/hello.pas",
+                "${workspaceFolder}/chap2/hello.crunched",
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            // debug configuration for the 'uncrunch' program
+            "name": "(gdb) uncrunch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${command:cmake.launchTargetDirectory}/uncrunch",
+            "args": [
+                "${workspaceFolder}/chap2/hello.crunched",
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            // debug configuration for the 'postfix' program
+            "name": "(gdb) postfix",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${command:cmake.launchTargetDirectory}/postfix",
+            "args": [
+                "${workspaceFolder}/chap4/postfix.in",
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            // debug configuration for the 'calc' program
+            "name": "(gdb) calc",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${command:cmake.launchTargetDirectory}/calc",
+            "args": [
+                "${workspaceFolder}/chap4/calc.in",
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            // debug configuration for the 'syntax1' program
+            "name": "(gdb) syntax1",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${command:cmake.launchTargetDirectory}/syntax1",
+            "args": [
+                "${workspaceFolder}/chap5/syntax1.in",
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            // debug configuration for the 'analyze' program
+            "name": "(gdb) analyze",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${command:cmake.launchTargetDirectory}/analyze",
+            "args": [
+                "${workspaceFolder}/chap6/analyze.in",
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ]
+        }, 
+        {
+            // debug configuration for the 'syntax2' program
+            "name": "(gdb) syntax2",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${command:cmake.launchTargetDirectory}/syntax2",
+            "args": [
+                "${workspaceFolder}/chap6/syntax2.in",
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ]
+        },                                                           
+    ]
+}
