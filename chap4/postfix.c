@@ -20,6 +20,7 @@
 /****************************************************************/
 
 #include <stdio.h>
+#include <string.h>
 #include "common.h"
 #include "error.h"
 #include "scanner.h"
