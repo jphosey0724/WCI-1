@@ -456,7 +456,7 @@ print_line(line)
 	*save_chp = '\0';
     }
 
-    printf(line);
+    printf("%s", line);
 
     if (save_chp) *save_chp = save_ch;
 }

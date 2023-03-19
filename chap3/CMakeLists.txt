@@ -19,3 +19,9 @@ add_executable(uncrunch
 target_include_directories(xref PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../chap2>)
 target_include_directories(crunch PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../chap2>)
 target_include_directories(uncrunch PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../chap2>)
+
+if (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
+	target_link_libraries(xref PRIVATE m)
+	target_link_libraries(crunch PRIVATE m)
+    target_link_libraries(uncrunch PRIVATE m)
+endif()

@@ -20,3 +20,8 @@ target_include_directories( calc
     PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../chap2>
     PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../chap3>
 )
+
+if (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
+	target_link_libraries(calc PRIVATE m)
+	target_link_libraries(postfix PRIVATE m)
+endif()

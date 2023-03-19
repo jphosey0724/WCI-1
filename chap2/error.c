@@ -127,14 +127,14 @@ error(code)
     if (print_flag) offset += 8;
     sprintf(message_buffer, "%*s^\n", offset, " ");
     if (print_flag) print_line(message_buffer);
-    else            printf(message_buffer);
+    else            printf("%s", message_buffer);
 
     /*
     --	Print the error message.
     */
     sprintf(message_buffer, " *** ERROR: %s.\n", message);
     if (print_flag) print_line(message_buffer);
-    else            printf(message_buffer);
+    else            printf("%s", message_buffer);
 
     *tokenp = '\0';
     ++error_count;
@@ -143,7 +143,7 @@ error(code)
 	sprintf(message_buffer,
 		"Too many syntax errors.  Aborted.\n");
 	if (print_flag) print_line(message_buffer);
-	else            printf(message_buffer);
+	else            printf("%s", message_buffer);
 
 	exit(-TOO_MANY_SYNTAX_ERRORS);
     }
