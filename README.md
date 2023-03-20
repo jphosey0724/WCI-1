@@ -15,7 +15,7 @@ The ultimate goal is for anyone with VS Code, CMake and a C compiler to be able 
 with the original code that I have not addressed since it would require refactoring and I only wanted to make the changes necessary to get it up and running. I did add
 comments in places that are especially egregious or that caused me issues. As a result, I have not been able to remove all compiler warnings. 
 
-NOTE: As of this writing, I am currently on chapter 6. I will be pushing updates periodically as I work through the book.
+NOTE: As of this writing, I am currently on chapter 8. I will be pushing updates periodically as I work through the book.
 
 
 
