@@ -363,6 +363,33 @@
                     "ignoreFailures": true
                 }
             ]
-        },                                                                     
+        },
+        {
+            // debug configuration for the 'pprint' program
+            "name": "(gdb) pprint",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${command:cmake.launchTargetDirectory}/pprint",
+            "args": [
+                "${workspaceFolder}/chap8/translat.pas",
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ]
+        },                                                                              
     ]
 }
